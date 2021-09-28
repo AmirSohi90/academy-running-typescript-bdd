@@ -1,10 +1,16 @@
+interface Item {
+  name: string;
+  quantity: number;
+}
+
 export class ShoppingBasket {
+  items: Item[] = [];
 
-    addItem(units: number, itemName: string) {
-        throw new Error("Not Implemented");
-    }
+  addItem(itemName: string, units: number) {
+    this.items.push({ name: itemName, quantity: units });
+  }
 
-    showBasket():string {
-        throw new Error("Not Implemented");
-    }
+  showBasket(): string {
+    throw new Error("Not Implemented");
+  }
 }
